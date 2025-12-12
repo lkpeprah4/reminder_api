@@ -26,7 +26,12 @@ def init_scheduler(app):
                     elif freq=="weekly":
                         reminder.schedule_time+=timedelta(weeks=1)
                     elif freq=="monthly":
-                        reminder.schedule_time+=relativedelta(months=1)    
+                        reminder.schedule_time+=relativedelta(months=1)   
+                    elif freq=="every 2 months":
+                        reminder.schedule_time+=relativedelta(months=2)
+                    elif freq=="yearly":
+                        reminder.schedule_time+=relativedelta(years=1)
+                     
                     
                     else:# if custom
                         try:
